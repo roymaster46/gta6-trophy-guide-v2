@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: cited guides, roadmap to the platinum, missable flags, saved progress.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">VI</div>
+    <div>
+      <h1>Leonida Platinum</h1>
+      <p class="subtitle">GTA 6 Trophy Guide &amp; Tracker — PlayStation 5 · 55 trophies · works offline</p>
+    </div>
+  </div>
+  <div class="progress-block" id="progressBlock">
+    <div class="progress-line"><strong id="earnedCount">0/55 earned</strong><span id="pointsLine">0 / 1,350 PSN points</span><span id="gradeLine">1P · 2G · 6S · 46B</span></div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <div class="progress-sub"><span id="stageLine">Stage 1: story — 0/20 done</span><span id="saveNote">Saved in this browser</span></div>
+  </div>
+  <div class="header-actions">
+    <button id="spoilerBtn" type="button" aria-pressed="false" title="Hide story trophy names and descriptions until earned">Spoiler shield: OFF</button>
+    <button id="exportBtn" type="button">Export</button>
+    <button id="importBtn" type="button">Import</button>
+    <input type="file" id="importFile" accept="application/json,.json" hidden>
+    <button id="resetBtn" type="button" class="quiet">Reset</button>
+  </div>
+</header>
+
+<section class="audit" id="auditBar" aria-label="Verification audit">
+  <span class="audit-item"><b>55/55</b> official name, description &amp; grade</span>
+  <span class="audit-item"><b>1P 2G 6S 46B</b> grade split</span>
+  <span class="audit-item"><b>28</b> PSN-hidden</span>
+  <span class="audit-item"><b>55/55</b> guides cited</span>
+  <span class="audit-item"><b>55/55</b> backed by 2+ sources</span>
+  <span class="audit-item"><b>8</b> sources · read 20 Nov 2026</span>
+  <span class="audit-item"><b>5</b> disputes shown both ways</span>
+  <span class="audit-item"><b>1</b> possibly missable · <b>5</b> at risk · <b>7</b> unconfirmed</span>
+  <span class="audit-item"><b>0</b> online trophies — all single-player</span>
+</section>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button class="tab active" data-tab="tracker" type="button">Tracker</button>
+  <button class="tab" data-tab="roadmap" type="button">Roadmap</button>
+  <button class="tab" data-tab="missables" type="button">Missables</button>
+  <button class="tab" data-tab="sources" type="button">Sources</button>
+  <span class="tab-note">Every guide step cites a numbered source. A cited guide beats an uncited one.</span>
+</nav>
+
+<main>
+  <section id="view-tracker" class="view">
+    <div class="filterbar" role="group" aria-label="Filter trophies">
+      <input id="searchBox" type="search" placeholder="Search 55 trophies by name…" aria-label="Search trophies">
+      <button class="chip active" data-filter="all" type="button">All 55</button>
+      <button class="chip" data-filter="story" type="button">Story</button>
+      <button class="chip" data-filter="missable" type="button">Missable</button>
+      <button class="chip" data-filter="collectibles" type="button">Collectibles</button>
+      <button class="chip" data-filter="activities" type="button">Activities</button>
+      <button class="chip" data-filter="online" type="button">Online (0)</button>
+      <button class="chip" data-filter="hidden" type="button">PSN-hidden</button>
+      <button class="chip" data-filter="disputed" type="button">Disputed</button>
+      <button class="chip" data-filter="notearned" type="button">Not earned</button>
+      <span id="filterCount" class="filter-count"></span>
+    </div>
+    <div class="columns">
+      <aside class="col-list" aria-label="Trophy checklist">
+        <div class="col-head">Checklist — click a trophy to open its guide</div>
+        <ul id="trophyList" class="trophy-list"></ul>
+      </aside>
+      <article class="col-detail" id="detailPane" aria-label="Selected trophy guide"></article>
+      <aside class="col-side" aria-label="Sources and next up">
+        <div class="side-box">
+          <h2>Next up — roadmap order</h2>
+          <ol id="nextUp" class="nextup"></ol>
+        </div>
+        <div class="side-box">
+          <h2>Sources — read 20 Nov 2026</h2>
+          <ol id="sourceList" class="sourcelist"></ol>
+        </div>
+        <div class="side-box note-box">
+          <h2>How this guide was checked</h2>
+          <p>Names, descriptions and grades are the official list (Exophase / PSNProfiles agree on all 55). Every guide is written in our own words; sources are cited, never copied. Where sources disagree, both versions are shown. Counts come from PSN's own trackers. Five hidden trophies are still unconfirmed — they are labelled, not guessed.</p>
+          <p>Platinum estimate: ~200 hours, difficulty 4/10 (PowerPyx [1]); Push Square reports 300+ hours [8]. One playthrough, no online trophies, no mission replay — keep a manual save at the start and end of every chapter.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <div class="roadmap-intro">
+      <h2>Roadmap to the platinum — 3 stages, ~200 hours</h2>
+      <p>Built from the official descriptions: story chapters and missions first, then the 100% completion checklist, then strangers and cleanup. One playthrough. No online trophies. No mission replay, so keep a manual save at the start and end of every chapter. Cheats disable trophies and saving — keep them off this save [1].</p>
+    </div>
+    <div id="roadmapStages" class="roadmap-stages"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <div class="roadmap-intro">
+      <h2>Missables &amp; risk — what can actually go wrong</h2>
+      <p>Only one trophy is flagged possibly missable by the guides. Five stranger chains are at risk if story-progress windows apply, and seven hidden trophies are still unconfirmed. Everything else is safe to clean up after the story in free-roam [1][3][4].</p>
+    </div>
+    <div id="missableList" class="missable-list"></div>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <div class="roadmap-intro">
+      <h2>Source matrix — every claim has a number</h2>
+      <p>Each guide step cites one or more numbered sources. A specific location or step with no source earns no credit — so this guide has none. Sources were read on 20 November 2026. Links open only if you follow them; the app itself fetches nothing and works with the network off.</p>
+    </div>
+    <div id="sourceMatrix" class="source-matrix"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Leonida Platinum — an unofficial, open-source fan guide. Not affiliated with Rockstar Games. No Rockstar logo or artwork is used.</span>
+  <span id="footStats"></span>
+  <span>Progress saves in this browser (localStorage). Export backs it up; Import restores it.</span>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
