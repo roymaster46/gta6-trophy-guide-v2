@@ -24,7 +24,7 @@ node serve.ts
 # open http://localhost:8080
 ```
 
-Static files only — `app/` works from any static server with the network off. It fetches one file of its own, `app/data/trophies.json`, and nothing else.
+Static files only — `app/` works from any static server with the network off. It fetches one file of its own, `app/data/trophies.json`, and nothing else. Once loaded, the app runs fully offline from its static files — no further network calls after the initial page load.
 
 ## Hand it in
 
